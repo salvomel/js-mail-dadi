@@ -5,14 +5,20 @@
 // GENERO NUMERO 
 const myNumber = Math.floor(Math.random() * 6) + 1;
 console.log(myNumber);
+
 const pcNumber = Math.floor(Math.random() * 6) + 1;
 console.log(pcNumber);
 
 // CONFRONTO NUMERI
+let message;
 if(myNumber>pcNumber) {
-    alert('Hai vinto!');
+    message='Hai vinto!';
 } else if(myNumber===pcNumber) {
-    alert('Hai pareggiato');
+    message='Hai pareggiato';
 } else {
-    alert('Hai perso');
+    message='Hai perso';
 }
+
+//OUTPUT
+const preMessage = `Il tuo numero è ${myNumber}, quello del computer è ${pcNumber}: `;
+alert(preMessage+message)
